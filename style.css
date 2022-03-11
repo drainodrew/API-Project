@@ -1,16 +1,84 @@
-body { 
+body {
+  background-color: #161616;
+  color: beige;
+  margin: 0;
+}
 
+.banner {
+  margin: 0;
+  background-color: blue;
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 50px;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 17px;
+}
+
+p {
 }
 
 .container {
-
+  margin: 0;
+  padding: 0;
 }
 
-.tab-box { 
+.parent-flex {
+  display: flex;
+  justify-content: center;
+  background-image: url("moss.jpg");
+  background-color: turquoise;
+  margin: 0 auto;
+  padding: 0;
+  border: 1px solid wheat;
+}
 
+.tab-box {
+  margin: 0 auto;
+  display: flex;
+  background-color: red;
+  width: 50%;
+  padding: 0;
+  flex-direction: row;
+  justify-content: space-around;
+
+  /*align-items: flex-start; //maybenotchill */
 }
 
 .tab {
-
+  margin: 1rem;
 }
 
+#tab1 {
+}
+
+#tab2 {
+}
+
+#tab3 {
+}
+
+#tab4 {
+}
+
+#ptab1 {
+  display: block;
+}
+/* i will probably need to create p ids and make them "display: none" and then create an event listener then they become display: block when tab 1 is clicked.
+      i was planning on doing that with the tab1 id, but i'm realizing i will still need the "title to appear. so maybe i don't need these ids at all" */
+#ptab2 {
+  display: none;
+}
+
+#ptab3 {
+  display: none;
+}
+
+#ptab4 {
+  display: none;
+}
