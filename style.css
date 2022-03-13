@@ -1,16 +1,22 @@
+html {
+  background: url("gal4.jpeg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 body {
-  background-color: #161616;
-  color: beige;
   margin: 0;
 }
 
-.banner {
+/*.banner {
   margin: 0;
   background-color: blue;
   width: 100%;
   padding: 1rem;
   margin-bottom: 50px;
-}
+}*/
 
 h1 {
   font-size: 20px;
@@ -35,14 +41,12 @@ p {
   background-color: turquoise;
   margin: 0 auto;
   padding: 0;
-  border: 1px solid wheat;
 }
 
-.tab-box {
+.tab-bar {
   margin: 0 auto;
   display: flex;
-  background-color: red;
-  width: 50%;
+  width: 75%;
   padding: 0;
   flex-direction: row;
   justify-content: space-around;
@@ -55,6 +59,8 @@ p {
 }
 
 #tab1 {
+  position: absolute; 
+
 }
 
 #tab2 {
@@ -66,8 +72,29 @@ p {
 #tab4 {
 }
 
+.display-box {
+  display: flex;
+  width: 75%;
+  height: 75vh;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.randomMonet {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.randomMonetImage {
+  width: 70%;
+  object-fit: contain;
+}
+
 #ptab1 {
-  display: block;
+  align-self: flex-end;
+  font-size: 50px;
+  color: red;
 }
 /* i will probably need to create p ids and make them "display: none" and then create an event listener then they become display: block when tab 1 is clicked.
       i was planning on doing that with the tab1 id, but i'm realizing i will still need the "title to appear. so maybe i don't need these ids at all" */
