@@ -62,7 +62,7 @@ let button = document.querySelector("#tab1")
 let test;
 let photos = [];
 let hunnid = [];
-button.addEventListener("click", function getData(e) {
+window.addEventListener("load", function getData(e) {
   for (let i = 0; i < 301; i++) {
   fetch("https://collectionapi.metmuseum.org/public/collection/v1/objects/" + `${i}`)
   //fetch("https://collectionapi.metmuseum.org/public/collection/v1/objects/" + `${Math.floor(Math.random() * 477838)}`)
@@ -87,11 +87,11 @@ button.addEventListener("click", function getData(e) {
       //}
      // const filteredArray = photos.filter(function(e) { return e !== ''})
     
-      if (this.data.objectID !== undefined && this.data.primaryImage !== "" && this.data.isPublicDomain === true) {
+      if (data.objectID !== undefined && data.primaryImage !== "" && data.isPublicDomain === true) {
         hunnid.push(photos[i])
       }
      }
-      console.log(hunnid)
+     // console.log(hunnid)
     
       //     //   let scanner = setInterval(checkForData, 100);
       //   }
@@ -100,10 +100,7 @@ button.addEventListener("click", function getData(e) {
      // console.log(data)
       
       test = data;
-      let image = document.querySelector(".randomMonetImage")
-      image.src = data.primaryImage
-      let artTitle = document.querySelector("#ptab1")
-      arTitle = data.title + " /n created by: " + data.artistDisplayName;
+      
      
     })
   
@@ -112,8 +109,28 @@ button.addEventListener("click", function getData(e) {
         });
   }
 })
-
-
-
+let tester;
+button.addEventListener("click", function randomPhoto(e) {
+ // for (let i = 0; i < hunnid.length; i++) {
+    
+    console.log(hunnid)
+  let randomPic = hunnid[Math.floor(Math.random() * hunnid.length)];
+  if (randomPic.primaryImage === "") {
+    randomPic = hunnid[Math.floor(Math.random() * hunnid.length)];
+  }
+  
+  
+  console.log(randomPic)
+  tester = randomPic;
+  let image = document.querySelector(".randomMonetImage")
+  image.src = randomPic.primaryImage
+  let noImage = ''
+  if (randomPic.primaryImage === "") {
+    noImage = " there's no image for this one, matey :(("
+  }
+    
+    let artBio = document.querySelector("#ptab1")
+    artBio.innerHTML = randomPic.title + " /n created by: " + randomPic.artistDisplayName + noImage;
+})
 //if (data.primaryImage = "") {
   //alert("Sorry, this work doesn't have an image.")

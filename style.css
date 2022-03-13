@@ -1,5 +1,5 @@
 html {
-  background: url("gal4.jpeg") no-repeat center center fixed;
+  background: url("gal700.jpeg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -33,45 +33,6 @@ p {
   margin: 0;
   padding: 0;
 }
-
-.parent-flex {
-  display: flex;
-  justify-content: center;
-  background-image: url("moss.jpg");
-  background-color: turquoise;
-  margin: 0 auto;
-  padding: 0;
-}
-
-.tab-bar {
-  margin: 0 auto;
-  display: flex;
-  width: 75%;
-  padding: 0;
-  flex-direction: row;
-  justify-content: space-around;
-
-  /*align-items: flex-start; //maybenotchill */
-}
-
-.tab {
-  margin: 1rem;
-}
-
-#tab1 {
-  position: absolute; 
-
-}
-
-#tab2 {
-}
-
-#tab3 {
-}
-
-#tab4 {
-}
-
 .display-box {
   display: flex;
   width: 75%;
@@ -81,20 +42,37 @@ p {
 }
 
 .randomMonet {
+  height: 90%;
+  margin-top: 15px;
   display: flex;
   justify-content: center;
-  height: 100%;
+  align-items: center;
 }
 
 .randomMonetImage {
   width: 70%;
+  height: 80%;
   object-fit: contain;
 }
 
+#tab1 {
+  margin: 0;
+  padding: 0;
+}
+
+#tab2 {
+  margin: 0;
+  padding: 0;
+}
+
 #ptab1 {
-  align-self: flex-end;
-  font-size: 50px;
-  color: red;
+  margin: 0 auto;
+  font-size: 15px;
+  color: black;
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translate(-50%, 50%);
 }
 /* i will probably need to create p ids and make them "display: none" and then create an event listener then they become display: block when tab 1 is clicked.
       i was planning on doing that with the tab1 id, but i'm realizing i will still need the "title to appear. so maybe i don't need these ids at all" */
