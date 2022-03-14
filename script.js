@@ -126,11 +126,20 @@ button.addEventListener("click", function randomPhoto(e) {
   image.src = randomPic.primaryImage
   let noImage = ''
   if (randomPic.primaryImage === "") {
-    noImage = " there's no image for this one, matey :(("
+    noImage = "Argggg, matey!! Someone stole me painting!!!";
+    image.src="pirate.jpeg"
+  }
+  let noName = ''
+  if (randomPic.artistDisplayName === '') {
+    noName = "unknown"
   }
     
     let artBio = document.querySelector("#ptab1")
-    artBio.innerHTML = randomPic.title + " /n created by: " + randomPic.artistDisplayName + noImage;
+    artBio.innerHTML =
+    `<b>${randomPic.artistDisplayName}</b>\n\n${randomPic.title}\n${randomPic.medium}
+      ${noImage}`;
 })
 //if (data.primaryImage = "") {
   //alert("Sorry, this work doesn't have an image.")
+
+  

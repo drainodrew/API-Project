@@ -4,6 +4,7 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 body {
@@ -50,19 +51,43 @@ p {
 }
 
 .randomMonetImage {
-  width: 70%;
-  height: 80%;
-  object-fit: contain;
+  /*width: 70%;
+  height: 80%;*/
+  width: 320px;
+  height: 240px;
+  /*object-fit: contain;*/
+  display: inline-block;
+  border-radius: 4px;
+  box-shadow: -2px -2px 1px rgba(0, 0, 0, 0.5) inset,
+    20px 4px 10px rgba(0, 0, 0, 0.35), 40px 8px 10px rgba(0, 0, 0, 0.15);
 }
 
 #tab1 {
+  position: absolute;
   margin: 0;
   padding: 0;
+  -webkit-transform: scale(0.3); /* Saf3.1+, Chrome */
+  -moz-transform: scale(0.3); /* FF3.5+ */
+  -ms-transform: scale(0.3); /* IE9 */
+  -o-transform: scale(0.3); /* Opera 10.5+ */
+  transform: scale(0.3);
+  left: 15%;
+  border: none;
+  bottom: 55%;
 }
 
 #tab2 {
+  position: absolute;
   margin: 0;
   padding: 0;
+  right: 15%;
+  bottom: 55%;
+  border: none;
+  -webkit-transform: scale(0.3); /* Saf3.1+, Chrome */
+  -moz-transform: scale(0.3); /* FF3.5+ */
+  -ms-transform: scale(0.3); /* IE9 */
+  -o-transform: scale(0.3); /* Opera 10.5+ */
+  transform: scale(0.3);
 }
 
 #ptab1 {
@@ -70,20 +95,10 @@ p {
   font-size: 15px;
   color: black;
   position: absolute;
-  bottom: 20%;
+  bottom: 41%;
   left: 50%;
   transform: translate(-50%, 50%);
+  white-space: pre-wrap;
 }
 /* i will probably need to create p ids and make them "display: none" and then create an event listener then they become display: block when tab 1 is clicked.
       i was planning on doing that with the tab1 id, but i'm realizing i will still need the "title to appear. so maybe i don't need these ids at all" */
-#ptab2 {
-  display: none;
-}
-
-#ptab3 {
-  display: none;
-}
-
-#ptab4 {
-  display: none;
-}
