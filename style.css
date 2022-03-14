@@ -8,7 +8,6 @@ html {
 }
 
 body {
-  margin: 0;
 }
 
 /*.banner {
@@ -80,7 +79,7 @@ p {
   position: absolute;
   margin: 0;
   padding: 0;
-  right: 15%;
+  right: 14.7%;
   bottom: 55%;
   border: none;
   -webkit-transform: scale(0.3); /* Saf3.1+, Chrome */

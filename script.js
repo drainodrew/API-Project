@@ -41,6 +41,7 @@ console.log("hey")
 let cat = document.querySelector("#randomMonet");
 let image = document.querySelector(".randomMonetImage")
 let button = document.querySelector("#tab1")
+let button2 = document.querySelector("#tab2")
 
 // let promises = [];
 // for (let i = 1; i <= 300; i++) {
@@ -141,5 +142,32 @@ button.addEventListener("click", function randomPhoto(e) {
 })
 //if (data.primaryImage = "") {
   //alert("Sorry, this work doesn't have an image.")
-
-  
+  button2.addEventListener("click", function randomPhoto(e) {
+    // for (let i = 0; i < hunnid.length; i++) {
+       
+       console.log(hunnid)
+     let randomPic = hunnid[Math.floor(Math.random() * hunnid.length)];
+     if (randomPic.primaryImage === "") {
+       randomPic = hunnid[Math.floor(Math.random() * hunnid.length)];
+     }
+     
+     
+     console.log(randomPic)
+     tester = randomPic;
+     let image = document.querySelector(".randomMonetImage")
+     image.src = randomPic.primaryImage
+     let noImage = ''
+     if (randomPic.primaryImage === "") {
+       noImage = "Argggg, matey!! Someone stole me painting!!!";
+       image.src="pirate.jpeg"
+     }
+     let noName = ''
+     if (randomPic.artistDisplayName === '') {
+       noName = "unknown"
+     }
+       
+       let artBio = document.querySelector("#ptab1")
+       artBio.innerHTML =
+       `<b>${randomPic.artistDisplayName}</b>\n\n${randomPic.title}\n${randomPic.medium}
+         ${noImage}`;
+        })
