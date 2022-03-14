@@ -9,6 +9,11 @@ html {
 
 body {
 }
+h2 {
+  margin: 0;
+  padding: 0;
+  
+}
 
 /*.banner {
   margin: 0;
@@ -98,6 +103,7 @@ p {
   left: 50%;
   transform: translate(-50%, 50%);
   white-space: pre-wrap;
+  text-align: left;
 }
 /* i will probably need to create p ids and make them "display: none" and then create an event listener then they become display: block when tab 1 is clicked.
       i was planning on doing that with the tab1 id, but i'm realizing i will still need the "title to appear. so maybe i don't need these ids at all" */
